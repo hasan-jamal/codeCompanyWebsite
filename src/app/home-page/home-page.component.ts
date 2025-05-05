@@ -8,35 +8,30 @@ import videojs from 'video.js';
 import type Player from 'video.js/dist/types/player';
 
 @Component({
-  
-  selector: 'app-home-page',
-  standalone:true,
-  imports: [
-    CommonModule, 
-    SlickCarouselModule
-
-  ],
-  templateUrl: './home-page.component.html',
-  styleUrls: [
-    './home-page.component.css',
-    '../../assets/css/style.css',
-    '../../assets/css/general.css',
-    
-  ],
-    schemas:[CUSTOM_ELEMENTS_SCHEMA],
-  encapsulation: ViewEncapsulation.None,
-  animations: [
-    trigger('slideFade', [
-      transition(':enter', [
-        style({ height: 0, opacity: 0 }),
-        animate('50ms ease', style({ height: '*', opacity: 1 , display:'none'})),
-      ]),
-      transition(':leave', [
-        animate('500ms ease', style({ height: 0, opacity: 0, display:'block' })),
-      ]),
-    ]),
-  ],
-
+    selector: 'app-home-page',
+    imports: [
+        CommonModule,
+        SlickCarouselModule
+    ],
+    templateUrl: './home-page.component.html',
+    styleUrls: [
+        './home-page.component.css',
+        '../../assets/css/style.css',
+        '../../assets/css/general.css',
+    ],
+    schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    encapsulation: ViewEncapsulation.None,
+    animations: [
+        trigger('slideFade', [
+            transition(':enter', [
+                style({ height: 0, opacity: 0 }),
+                animate('50ms ease', style({ height: '*', opacity: 1, display: 'none' })),
+            ]),
+            transition(':leave', [
+                animate('500ms ease', style({ height: 0, opacity: 0, display: 'block' })),
+            ]),
+        ]),
+    ]
 })
 export class HomePageComponent implements OnInit ,AfterViewInit{
   @ViewChild('slickModalBlogs', { static: false }) slickModalBlogs!: SlickCarouselComponent;

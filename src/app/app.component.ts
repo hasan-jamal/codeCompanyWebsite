@@ -8,12 +8,10 @@ import { Inject, PLATFORM_ID } from '@angular/core';
 
 
 @Component({
-  selector: 'app-root',
-   standalone: true,
-  imports: [NavbarDesComponent, NavbarMbComponent, FooterComponent],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-
+    selector: 'app-root',
+    imports: [NavbarDesComponent, NavbarMbComponent, FooterComponent],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit  {
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
