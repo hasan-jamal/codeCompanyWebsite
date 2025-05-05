@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-navbar-mb',
+  standalone:true,
   imports: [],
   templateUrl: './navbar-mb.component.html',
   styleUrls:[ 
