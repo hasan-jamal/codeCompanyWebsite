@@ -2,7 +2,7 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
     selector: 'app-about-us',
-    imports: [],
+    standalone: true,
     templateUrl: './about-us.component.html',
     styleUrls: ['./about-us.component.css',
         '../../assets/css/general.css',
