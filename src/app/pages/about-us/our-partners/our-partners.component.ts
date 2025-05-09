@@ -5,8 +5,10 @@ import { Component } from '@angular/core';
   imports: [],
   templateUrl: './our-partners.component.html',
   styleUrls:['./our-partners.component.css',
-                  '../../../../assets/css/style.css',
-                  '../../../../assets/css/general.css']
+                  '../../../../assets/css/general.css',
+                  '../../../../assets/css/pages/ourDatacenterPartners.css',
+                  '../../../../assets/css/sections/contactSection.css',
+                  '../../../../assets/css/sections/ourServiceFlow.css']
 })
 export class OurPartnersComponent {
 
