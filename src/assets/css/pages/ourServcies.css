@@ -3,7 +3,7 @@
 }
 .servicesS1 .servicesS1-container{position: relative;}
 .servicesS1 .back-servicesS1 {
-    background-image: url(../../images/servicesS1.png);
+    background-image: ../../assets/images/servicesS1.png);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,7 +27,7 @@
 }
 .servicesS1 .servicesS1-texts{
     padding: 50px 24px 40px 0;
-    background-image: url(../../images/Home.svg);
+    background-image: ../../assets/images/Home.svg);
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;

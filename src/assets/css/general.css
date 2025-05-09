@@ -274,18 +274,7 @@ p,button,a{font-size: 1rem;}.text-center{text-align: center;}.mb-0{margin-bottom
 /* ------------------------------------------------- */
 .transition3s{transition: 0.3s;cursor: pointer;}
 .transition3s:hover{transform: scale(0.9);}
- .coverBack {
-  background-color: rgba(0, 0, 0, 0.6);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100vh;
-  z-index: 10;
-  transition: background-color 0.3s, transform 0.3s;
-  display: block;
-}
+
 .mb24{margin-bottom: 24px;}
 @media (min-width:1706.67px) {
 }

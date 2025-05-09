@@ -1,44 +1,42 @@
 import { Routes ,CanActivate} from '@angular/router';
-import { HomePageComponent } from './home-page/home-page.component';
-import { ServciesPageComponent } from './servcies-page/servcies-page.component';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './dashboard/profile/profile.component';
 import { authGuard } from './auth.guard';
-import { AboutUsComponent } from './about-us/about-us.component';
-import { BlogsComponent } from './blogs/blogs.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 
 export const routes: Routes = [
-    {
-        path:'',
-        redirectTo:'index',
-        pathMatch:'full'
-    },
-  {
-        path:"index",
-        component:HomePageComponent
-    },  
       {
-        path:"aboutUs",
-        component:AboutUsComponent
-    },  
+        path: 'index',
+        redirectTo: '',
+        pathMatch: 'full'
+    },
     {
-        path:"blogs",
-        component:BlogsComponent
+        path: '',
+        loadChildren: () => import('./pages/index/index.module').then(m => m.IndexModule)
+    },
+    {
+        path: 'aboutUs',
+        loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+    },
+    {
+        path: 'news',
+        loadChildren: () => import('./pages/our-news/our-news.module').then(m => m.OurNewsModule)
     },  
     {
         path:"contactUs",
-        component:ContactUsComponent
+        loadChildren:()=>import('./pages/contactUs/contact-us.module').then(m=>m.ContactUsModule)
+    }, 
+    {
+        path: 'ourServices',
+        loadChildren: () => import('./pages/our-servcies/our-servcies.module').then(m => m.OurServciesModule)
     },  
-    {
-        path:"servcies",
-        loadComponent:()=>import('./servcies-page/servcies-page.component').then((c)=>c.ServciesPageComponent)
-    },
-    {
-        path:"servcies/:serviceId/:limit",
-        component:ServciesPageComponent
-    },
+    // {
+    //     path:"servcies",
+    //     loadComponent:()=>import('./servcies-page/servcies-page.component').then((c)=>c.ServciesPageComponent)
+    // },
+    // {
+    //     path:"servcies/:serviceId/:limit",
+    //     component:ServciesPageComponent
+    // },
     {
         path:"old-servcies/:serviceId",
         redirectTo: (route)=>{
@@ -59,6 +57,6 @@ export const routes: Routes = [
     },
     {
         path:"**",
-        component:NotFoundComponent
+        loadChildren: () => import('./pages/notFound/not-found.module').then(m => m.NotFoundModule)
     }
 ];

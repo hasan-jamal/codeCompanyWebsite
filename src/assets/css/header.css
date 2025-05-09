@@ -92,11 +92,26 @@
   font-size: 1rem;
   background: transparent;
 }
-.nav-mobile .listServices{
-  margin-top: 16px;
-  padding-left: 16px;
-  display: none;
-} 
+
+.nav-mobile .btnServicesMb .listServices {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding: 0;
+}
+.nav-mobile .btnServicesMb .listServices.active {
+  max-height: 500px; /* Adjust based on content size */
+  padding: 10px 0;
+}
+
+.nav-mobile .btnServicesMb img.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.nav-mobile .btnServicesMb img {
+  transition: transform 0.3s ease;
+}
 .nav-mobile .listServices a{font-size: 14px;}
 .nav-mobile .links a.active{
   background: linear-gradient(90deg, #E64A62 0%, #F9863D 100%);
@@ -108,14 +123,14 @@
   width: 24px;
 }
 .nav-mobile button:hover{transform: scale(1);}
-.sidenav-active .navbar-mobile{display: block;}
-.sidenav-active .close-nav{ 
+#sidenav-active .navbar-mobile{display: block;}
+#sidenav-active .close-nav{ 
   display: block;
   background: none;
   margin-top: 26px;
   margin-left: 10px;
 }
-.sidenav-active .coverNav {
+#sidenav-active .coverNav {
   background-color: rgba(0, 0, 0, 0.3);
   position: fixed;
   top: 0;
@@ -127,11 +142,11 @@
   transition: background-color 0.3s, transform 0.3s;
   display: block;
 }
-nav, .hamburger, .coverNav {
+ .hamburger, .coverNav {
   transition: transform 0.3s;
   display: none;
 }
-.sidenav-active nav, .sidenav-active .coverNav {
+.nav-mobile.active {
   transform: translateX(0px);
   left: 0;
 }
@@ -153,7 +168,7 @@ nav, .hamburger, .coverNav {
   display: flex;
 }
 .navbar-mobile .flex-head img{width: 135px;object-fit: contain;}
-.sidenav-active .navbar-mobile .flex-head{display: none;}
+#sidenav-active .navbar-mobile .flex-head{display: none;}
 /* Header */
 header .fx-header{
   padding: 90px 0 0 0;
@@ -172,23 +187,53 @@ header .fx-header .btn-header button{
   width: 164px;
   font-size: 20px;
 }
+header .btnServicesHeader{
+      position: relative;
+  z-index: 1000;
+}
 header .btnServicesHeader .listServicesHeader{
   padding: 24px;
   border-radius: 10px;
   background: #FFF;
   gap: 30px;
-  position: absolute;
-  z-index: 999;
   left: 50%;
-  transform: translate(-50%,0);
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  display: none;
-}
-header .btnServicesHeader .listServicesHeader.active{
-  opacity: 1;
+  position: absolute;
+  top: 100%;
   display: flex;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-50%);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+  z-index: 1001;
+}
+header .btnServicesHeader:hover .listServicesHeader {
+  opacity: 1;
+  visibility: visible;
+}
+.coverBack {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 999;
+}
+
+.coverBack.active {
+  opacity: 1;
+  visibility: visible;
+}
+header .btnServicesHeader:hover ~ .coverBackHeader {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 header .btnServicesHeader .listServicesHeader .listPart{
   width:215px;
@@ -232,6 +277,16 @@ header .btnServicesHeader .fx-listServices a.active{
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+.dropDownActive span{
+    background: linear-gradient(270deg, #E74B62 0%, #FAA26B 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+.dropDownActive img{
+    filter: brightness(0) saturate(100%) invert(68%) sepia(32%) saturate(3766%) hue-rotate(332deg) brightness(100%) contrast(96%);
 }
 @media (min-width:1706.67px) {
   header .fx-header .links-header{gap: 20px;}
@@ -293,5 +348,5 @@ header .btnServicesHeader .fx-listServices a.active{
 @media (max-width:614.40px) {
   header{display: none;}
   .navbar-mobile{display: block;}
-  .sidenav-active .navbar-mobile .flex-head{display: flex;}
+  #sidenav-active .navbar-mobile .flex-head{display: flex;}
 }

@@ -16,16 +16,16 @@
     background-repeat: no-repeat;
 }
 .ourDatacenterPartnersS1 .fx-ourDatacenterPartnersS1 .boxBack1{
-    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), url(../../images/imageAI-1.png) lightgray top / cover no-repeat;
+    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), ../../assets/images/imageAI-1.png) lightgray top / cover no-repeat;
 } 
 .ourDatacenterPartnersS1 .fx-ourDatacenterPartnersS1 .boxBack2{
-    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), url(../../images/imageAI-2.png) lightgray top / cover no-repeat;
+    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), ../../assets/images/imageAI-2.png) lightgray top / cover no-repeat;
 } 
 .ourDatacenterPartnersS1 .fx-ourDatacenterPartnersS1 .boxBack3{
-    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), url(../../images/WhoisCode2.png) lightgray top / cover no-repeat;
+    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), ../../assets/images/WhoisCode2.png) lightgray top / cover no-repeat;
 } 
 .ourDatacenterPartnersS1 .fx-ourDatacenterPartnersS1 .boxBack4{
-    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), url(../../images/servicesS3-img5.png) lightgray top / cover no-repeat;
+    background: linear-gradient(0deg, rgba(43, 45, 67, 0.70) 0%, rgba(43, 45, 67, 0.70) 100%), ../../assets/images/servicesS3-img5.png) lightgray top / cover no-repeat;
 } 
 .scale-animation {
   transform: scale(1.05);

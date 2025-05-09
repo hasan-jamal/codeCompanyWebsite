@@ -1,17 +1,17 @@
 <div class="navbar-mobile">
     <div class=" align-items-center  justify-content-between  flex-head">
         <a href="index.html"><img src="../../../assets/images/logo.svg" class="logo-image" /></a>
-        <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+        <div class="hamburger" id="hamburger" (click)="toggleSidenav(true)">
             <div class="div1"></div>
             <div class="div2"></div>
             <div class="div3"></div>
         </div>
     </div>
-    <nav class="nav-mobile">
+    <nav class="nav-mobile" [class.active]="isSidenavOpen">
         <div class="links">
             <div class="d-flex align-items-center justify-content-between fxLogo">
                 <img src="../../../assets/images/logo.svg" class="logo" />
-                <div class="hamburger" id="hamburger" onclick="toggleSidenav();">
+                <div class="hamburger" id="hamburger-inside" (click)="toggleSidenav(false)">
                     <div class="div1"></div>
                     <div class="div2"></div>
                     <div class="div3"></div>
@@ -24,12 +24,13 @@
                 <div class="border"></div>
                 <div class="btnServicesMb">
                     <button type="button" class="link d-flex align-items-center justify-content-between w-100"
-                        data-target="Industries-list">
-                        <span class="font-medium linkStyle">Our
-                            services</span>
-                        <img src="../../../assets/images/arrowDown.svg" alt="arrowDown icon">
+                        (click)="toggleServicesList()">
+                        <span class="font-medium linkStyle">Our services</span>
+                        <img src="../../../assets/images/arrowDown.svg" alt="arrowDown icon"
+                            [class.rotated]="servicesListOpen" />
                     </button>
-                    <div class="listServices" id="Industries-list">
+
+                    <div class="listServices" [class.active]="servicesListOpen">
                         <div class="listPart">
                             <div class="d-flex flex-column fx-listServices gap20">
                                 <a href="" class="font-medium">Database Consulting</a>
@@ -46,6 +47,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="border"></div>
                 <a href="./ourPartners.html" class="font-medium">Our partners</a>
                 <div class="border"></div>

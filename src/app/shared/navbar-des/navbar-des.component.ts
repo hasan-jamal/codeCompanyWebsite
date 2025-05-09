@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Renderer2, OnInit, OnDestroy } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-navbar-des',
-  imports: [RouterLink, RouterLinkActive],
+  imports: [RouterLink, RouterLinkActive,CommonModule],
   templateUrl: './navbar-des.component.html',
   styleUrls: [
      './navbar-des.component.css',
@@ -12,5 +13,13 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
   ],
 })
 export class NavbarDesComponent {
+    isCoverVisible = false;
 
+  showCover() {
+    this.isCoverVisible = true;
+  }
+
+  hideCover() {
+    this.isCoverVisible = false;
+  }
 }
