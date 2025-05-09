@@ -28,11 +28,21 @@
   --colorWhite-solid:#fff;
   --letter-spacing--8:8px;
 }
-*{
-    margin: 0;
-    border: none;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent; /* لإزالة التحديد الأزرق في الموبايل */
+  -webkit-focus-ring-color: transparent;    /* لإزالة تأثير الحلقات الزرقاء في كروم */
+}
+:focus,
+:active {
+  outline: none !important;
+}
+::-moz-focus-inner {
+  border: 0 !important;
 }
 p{margin-bottom: 0px;}
 html{

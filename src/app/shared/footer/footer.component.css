@@ -12,6 +12,7 @@ footer .fxFooter .fxFooter-part1 .fxLinksFooter{
 }
 footer .fxFooter .fxFooter-part1 .fxLinksFooter a{
 transition: all 0.3s ease;
+text-decoration: none;
 }
 footer .fxFooter .fxFooter-part1 .fxLinksFooter a:hover{
    font-weight: 600;

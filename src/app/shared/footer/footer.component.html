@@ -19,17 +19,17 @@
             <div class="fxFooter-part1">
                 <h1 class="colorTwo subtitle36px font-medium">Quick links</h1>
                 <div class="d-flex flex-column fxLinksFooter">
-                    <a routerLink="index" routerLinkActive="color-linearGradient"
-                        class="subtitle20px colorTwo style-font">Home</a>
+                    <a routerLink="/" routerLinkActive="color-linearGradient" class="subtitle20px colorTwo style-font"
+                        [routerLinkActiveOptions]="{exact:true}">Home</a>
                     <a routerLink="aboutUs" routerLinkActive="color-linearGradient"
                         class="subtitle20px colorTwo style-font">About us</a>
                     <a routerLink="ourServcies" routerLinkActive="color-linearGradient"
                         class="subtitle20px colorTwo style-font">Our services</a>
-                    <a routerLink="ourPartners" routerLinkActive="color-linearGradient"
+                    <a routerLink="/aboutUs/ourPartners" routerLinkActive="color-linearGradient"
                         class="subtitle20px colorTwo style-font">Our partners</a>
-                    <a routerLink="index" routerLinkActive="color-linearGradient"
+                    <a routerLink="news" routerLinkActive="color-linearGradient"
                         class="subtitle20px colorTwo style-font">Our news</a>
-                    <a routerLink="index" routerLinkActive="color-linearGradient"
+                    <a routerLink="contactUs" routerLinkActive="color-linearGradient"
                         class="subtitle20px colorTwo style-font">Contact us</a>
                 </div>
             </div>

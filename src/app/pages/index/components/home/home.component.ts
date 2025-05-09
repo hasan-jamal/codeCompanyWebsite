@@ -399,18 +399,7 @@ constructor(private elementRef: ElementRef) {}
       jobTitle: "CEO of Growtime",
       backgroundColor:"#FEEFE6"
     },
-    {
-      text: "The AI-powered data analysis services from Code helped us gain deeper insights into our customers and make smarter decisions.",
-      fullName: "Jenny Wilson",
-      jobTitle: "CEO of Growtime",
-      backgroundColor:"#D9D9D9"
-    },
-    {
-      text: "The AI-powered data analysis services from Code helped us gain deeper insights into our customers and make smarter decisions.",
-      fullName: "Jenny Wilson",
-      jobTitle: "CEO of Growtime",
-      backgroundColor:"#FEEFE6"
-    },
+
         {
       text: "The AI-powered data analysis services from Code helped us gain deeper insights into our customers and make smarter decisions.",
       fullName: "Jenny Wilson",

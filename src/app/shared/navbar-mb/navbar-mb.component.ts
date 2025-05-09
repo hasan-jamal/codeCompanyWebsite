@@ -1,8 +1,10 @@
+import { CommonModule } from '@angular/common';
 import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
     selector: 'app-navbar-mb',
-    imports: [],
+    imports: [RouterLink, RouterLinkActive,CommonModule],
     templateUrl: './navbar-mb.component.html',
     styleUrls: [
         './navbar-mb.component.css',
@@ -14,6 +16,7 @@ import { Component, Renderer2, ViewEncapsulation } from '@angular/core';
 export class NavbarMbComponent{
      isSidenavOpen = false;
     servicesListOpen = false;
+    aboutUsListOpen = false;
   constructor(private renderer: Renderer2) {}
  toggleSidenav(open: boolean) {
     this.isSidenavOpen = open;
@@ -27,7 +30,17 @@ export class NavbarMbComponent{
       }
     }
   }
+  closeSidenav(){
+    this.isSidenavOpen = false;
+    this.servicesListOpen = false;
+    this.aboutUsListOpen = false;
+    const body = document.getElementById('body');
+    this.renderer.setStyle(body, 'overflow', 'auto');
+  }
   toggleServicesList() {
     this.servicesListOpen = !this.servicesListOpen;
+  }
+  toggleAboutUsList() {
+    this.aboutUsListOpen = !this.aboutUsListOpen;
   }
 }
