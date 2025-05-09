@@ -412,6 +412,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     width: 100%;   
+    margin-bottom: 128px;
 }
 .sectionFour .sectionFour-container{padding-top: 6rem;}
 .sectionFour .fx-sectionFour{gap: 24px;align-items: center;}
@@ -622,7 +623,9 @@
 @media (min-width:2048px) { }
 @media (min-width:2304px) {}
 @media (max-width:1396.36px) {}
-@media (max-width:1228.8px) {}
+@media (max-width:1228.8px) {
+    .sectionSix .card-sectionSix .divTextOne h5 {line-height: 22px;}
+}
 @media (max-width:1024px) {}
 @media (max-width:877.71px) {
     .sectionSix {margin: 100px 0;}
@@ -713,7 +716,7 @@
 }
 /* Section Videos  Style */
 .sectionVideos{
-    margin: 120px 0 ;
+    margin: 128px 0 ;
 }
 .sectionVideos .divTitles{
     width:53%;
@@ -733,7 +736,7 @@
     left: 0;
 }
 .sectionVideos .divVideo .fx-Videos{
-    padding-top: 5rem;
+    padding-top: 4rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -763,6 +766,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
 }
 .video-thumbnails .thumbnail{
     flex: 1 1 calc(20% - 10px);
@@ -801,5 +805,52 @@
     left: 50%;
     position: absolute;
     transform: translate(-50%,-50%);
-    width: 20%;
+    width: 18%;
 }
+/* Just for copy */
+@media (min-width:1706.67px) {
+    .sectionVideos .video-js ,
+    .sectionVideos .divVideo .mainVideo{height:530px;}
+    .video-thumbnails .thumbnail{height: 200px;}
+}
+@media (min-width:1920px) {
+    .sectionVideos .video-js ,
+    .sectionVideos .divVideo .mainVideo{height:580px;}
+    .video-thumbnails .thumbnail{height: 240px;}
+}
+@media (min-width:2048px) { 
+    .sectionVideos .video-js ,
+    .sectionVideos .divVideo .mainVideo{height:660px;}
+}
+@media (min-width:2304px) {}
+@media (max-width:1396.36px) {
+
+}
+@media (max-width:1228.8px) {
+
+}
+@media (max-width:1024px) {
+    .sectionVideos .video-js ,
+    .sectionVideos .divVideo .mainVideo{height: 400px;}
+    .video-thumbnails .thumbnail .thumbnail-text{padding: 16px;}
+    .video-thumbnails .thumbnail{height: 140px;}
+    .video-thumbnails .thumbnail .imgVideo{border-radius: 20px;}
+    .play-button{width: 15%;}
+}
+@media (max-width:877.71px) {
+    .sectionVideos .video-js ,
+    .sectionVideos .divVideo .mainVideo{height: 320px;}
+    .video-thumbnails .thumbnail .thumbnail-text{padding: 12px;}
+    .video-thumbnails .thumbnail{height: 120px;}
+    .video-thumbnails .thumbnail .imgVideo{border-radius: 15px;}
+}
+@media (max-width:768px) {}
+@media (max-width:614.4px) {
+    .video-thumbnails .thumbnail {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 0px);
+    }
+    .sectionVideos .divTitles{width: 95%;}
+    .sectionVideos .divVideo .fx-Videos{padding-top: 2rem;}
+}
+@media (max-width:512px) {}

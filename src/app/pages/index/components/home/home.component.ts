@@ -18,8 +18,7 @@ import 'video.js/dist/video-js.css';
   ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css',
-                    '../../../../../assets/css/style.css',
-                '../../../../../assets/css/general.css',
+                    '../../../../../assets/css/style.css'
   ],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
  encapsulation: ViewEncapsulation.None,
@@ -442,9 +441,15 @@ constructor(private elementRef: ElementRef) {}
     rtl: false,
     responsive: [
       {
-        breakpoint: 768,
+        breakpoint: 1229,
         settings: {
-          slidesToShow: 3
+          slidesToShow: 3.5
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3.2
         }
       },
       {
