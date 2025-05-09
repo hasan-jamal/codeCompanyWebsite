@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewEncapsulation,CUSTOM_ELEMENTS_SCHEMA, ElementRef
-  , OnInit, ViewChild, AfterViewInit ,Input,
+  , OnInit, ViewChild, AfterViewInit ,
   OnDestroy} from '@angular/core';
 import { SlickCarouselModule,SlickCarouselComponent } from 'ngx-slick-carousel';
 import { trigger, transition, style, animate } from '@angular/animations';
@@ -34,7 +34,7 @@ import 'video.js/dist/video-js.css';
     ]),
   ],
 })
-export class HomeComponent  implements OnInit ,AfterViewInit,OnDestroy{
+export class HomeComponent  implements OnInit ,AfterViewInit{
 constructor(private elementRef: ElementRef) {}
   @ViewChild('slickModalBlogs', { static: false }) slickModalBlogs!: SlickCarouselComponent;
   @ViewChild('slickPeopleSaying', { static: false }) slickPeopleSaying!: SlickCarouselComponent;
@@ -44,14 +44,13 @@ constructor(private elementRef: ElementRef) {}
   @ViewChild('slideText') slideTextRef!: ElementRef;
   @ViewChild('slideActive') slideActiveRef!: ElementRef;
   @ViewChild('media') mediaElement: ElementRef<HTMLVideoElement> | null = null;
-  @ViewChild('target', { static: false }) target!: ElementRef<HTMLVideoElement>;
   @ViewChild('carousel', { static: false }) carousel: ElementRef;
+  @ViewChild('target', { static: false }) target!: ElementRef<HTMLIFrameElement>;
 
-  @Input() videoSrc = '';
-  player: any;
+  @ViewChild('videoPlayer') videoPlayer!: ElementRef<HTMLVideoElement>;
 
-
-  plyrList = [
+  mainVideo: any;
+  plyrList : any[]= [
     {
         src: 'assets/videos/CODE - BPX Developing and Operating a Digital Replica of a Building.mp4',
         type: 'video/mp4',
@@ -60,7 +59,7 @@ constructor(private elementRef: ElementRef) {}
       img:'assets/images/Frame-398-min.png'
     },
   {
-    src: 'assets/videos/CODE - BPX_Real Estate Touch TV App Demo.mp4',
+    src: '../../../assets/videos/CODE - BPX_Real Estate Touch TV App Demo.mp4',
     type: 'video/mp4',
     title: 'Real Estate Touch TV App',
     subTitle: 'Lorem ipsum dolor sit amet...',
@@ -89,64 +88,45 @@ constructor(private elementRef: ElementRef) {}
     img:'assets/images/Frame-398-min.png' 
     }
   ];
-  
+
+
   ngOnInit(): void {
      this.activateFirstBox();
+     this.mainVideo = this.plyrList[0];
+     this.plyrList = this.plyrList.slice(1)
   }
+  changeVideo(video: any) {
+    const updatedList = this.plyrList.filter(v => v.src !== video.src);
+    if (this.mainVideo) {
+      updatedList.push(this.mainVideo);
+    }
+    this.mainVideo = video;
+    this.plyrList = updatedList;
+
+    // Force reload and play
+    setTimeout(() => {
+      if (this.videoPlayer) {
+        this.videoPlayer.nativeElement.load();
+        this.videoPlayer.nativeElement.play().catch(() => {}); // optional: handle autoplay error
+      }
+    });
+  }
+ 
   ngAfterViewInit() {
     this.initSliders(); 
-    // Ensure plyrList has at least one video
-    if (!this.plyrList || this.plyrList.length === 0) {
-    console.error('No videos available in plyrList');
-    return;
-    }
-    const firstVideo = this.plyrList[0];
-    // Add a small delay to ensure DOM is ready (optional but often helps)
+
     setTimeout(() => {
-    if (this.target?.nativeElement) {
-    try {
-      this.player = videojs(this.target.nativeElement, {
-        controls: true,
-        autoplay: false,
-        preload: 'auto',
-        sources: [{
-          src: firstVideo.src,
-          type: firstVideo.type
-        }]
-      });
-    } catch (error) {
-      console.error('Video.js initialization error:', error);
-    }
-    } else {
-    console.error('Video element not found!');
-    }
-
-
     const dots = $('.sectionSix .slick-dots');
-    // Avoid duplicate button
     if (!dots.find('.custom-next-arrow').length) {
       dots.append('<button class="custom-next-arrow"></button>');
     }
    $('.custom-next-arrow').append('<img src="../../assets/images/arrow-peopleSaying.svg" />');
-    // Add click event to the custom next arrow
     $('.custom-next-arrow').on('click', () => {
       this.slickPeopleSaying.slickNext()
     });
     });
   }
 
-  changeVideo(video: { src: string; type: string }) {
-  if (this.player) {
-    this.player.src({ src: video.src, type: video.type });
-    this.player.play();
-  }
-}
-  ngOnDestroy() {
-    if (this.player) {
-      this.player.dispose();
-    }
-  }
- 
  
 
 
@@ -266,7 +246,7 @@ constructor(private elementRef: ElementRef) {}
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2.6
         }
       }
     ]
@@ -302,7 +282,7 @@ constructor(private elementRef: ElementRef) {}
       {
         breakpoint: 480,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2.5
         }
       }
     ]

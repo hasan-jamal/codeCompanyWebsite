@@ -133,27 +133,31 @@
         <div class="divVideo px-120">
             <img src="../../../../../assets/images/AL-POWER.svg" alt="AL POWER Word" class="AL-POWER">
             <div class="fx-Videos">
-                <div class="mainVideo">
-                    <video #target class="video-js vjs-default-skin" controls playsinline preload="auto" width="640"
-                        height="360"></video>
-
-
+                <div class="divMainVideo" *ngIf="mainVideo">
                     <div class="mainVideo-text">
-                        <h3 class="subtitle16px font-bold colorWhite"></h3>
+                        <h3 class="subtitle36px font-bold color-two">{{ mainVideo.title }}</h3>
+                        <p class="subtitle16px style-font color-two">{{ mainVideo.subTitle }}</p>
                     </div>
+                    <video #videoPlayer class="mainVideo " controls autoplay>
+                        <source [src]="mainVideo.src" [type]="mainVideo.type">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
-                <!-- قائمة الفيديوهات -->
+                <!-- Thumbnails -->
                 <div class="d-flex video-thumbnails fxGeneral-cards">
                     <div class="thumbnail" *ngFor="let video of plyrList" (click)="changeVideo(video)">
                         <img src="../../../../../assets/images/play-button.svg" alt="play-button" class="play-button">
                         <img [src]="video.img" alt="{{ video.title }}" class="imgVideo">
-                        <!-- <video [src]="video.src" preload="auto"></video> -->
                         <div class="thumbnail-text">
                             <h3 class="subtitle16px font-bold colorWhite">{{ video.title }}</h3>
                         </div>
                     </div>
                 </div>
+
+
+
+
             </div>
         </div>
     </div>
