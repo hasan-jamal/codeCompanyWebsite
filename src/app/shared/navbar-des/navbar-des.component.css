@@ -30,11 +30,17 @@ header .btnServicesHeader .listAboutHeader{
     color: #4F4F4F;
     padding: 8px;
   }
+  header .btnServicesHeader .fx-listServices a {
+    color: #000;
+    font-size: 16px;
+    display: block;
+    text-decoration: none;
+    transition: 0.3s;
+}
   header .btnServicesHeader .listAboutHeader a.active,
   header .btnServicesHeader .listAboutHeader a:hover{
     border-radius: 5px 0px 5px 5px;
     background: #FDE0CE;
-
   }
   header .btnServicesHeader .listAboutHeader a:last-child{
     border-bottom: none;

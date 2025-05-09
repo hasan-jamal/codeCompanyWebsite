@@ -259,25 +259,33 @@ header .btnServicesHeader .listServicesHeader .listPart{
   background-image: url(../images/backServiceActive.svg);
 }
 header .btnServicesHeader .fx-listServices a{
-  color: #000;
+  color: #4F4F4F;
   font-size: 16px;
   display: block;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.2s;
+
 }
+header .btnServicesHeader .fx-listServices a.active,
 header .btnServicesHeader .fx-listServices a:hover{
-  background: linear-gradient(270deg, #E74B62 0%, #FAA26B 100%);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  border-radius: 5px 0px 5px 5px;
+  background: #FDE0CE;
   transform: scale(0.96);
+  padding: 8px;
 }
-header .btnServicesHeader .fx-listServices a.active{
+
+/* header .btnServicesHeader .fx-listServices a:hover{
   background: linear-gradient(270deg, #E74B62 0%, #FAA26B 100%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+} */
+/* header .btnServicesHeader .fx-listServices a.active{
+  background: linear-gradient(270deg, #E74B62 0%, #FAA26B 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
 .dropDownActive span{
     background: linear-gradient(270deg, #E74B62 0%, #FAA26B 100%);
     background-clip: text;
