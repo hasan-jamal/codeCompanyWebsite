@@ -50,7 +50,7 @@ constructor(private elementRef: ElementRef) {}
   mainVideo: any;
   plyrList : any[]= [
     {
-        src: 'dist/code-website/browser/assets/videos/videoOne.mp4',
+        src: 'assets/videos/videoOne.mp4',
         type: 'video/mp4',
       title: 'AI vs Human: The Results Will Shock You!',
       subTitle: 'Lorem ipsum dolor sit amet...',
