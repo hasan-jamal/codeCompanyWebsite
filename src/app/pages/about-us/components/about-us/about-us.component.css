@@ -229,12 +229,12 @@
 @media (max-width:877.71px) {}
 @media (max-width:768px) {}
 @media (max-width:614.4px) {
-    .aboutSFour .fx-aboutSFour{flex-direction: column;}
+    .aboutSFour .fx-aboutSFour{flex-direction: column;gap: 90px;}
     .aboutSFour .aboutSFour-part{width: 100%;}
     .aboutSFour .aboutSFour-part .mt55{order: 1;}
     .aboutSFour .aboutSFour-texts{order: 2;}
     .aboutSFour .aboutSFour-part{gap: 16px;}
-    .aboutSFour {padding-top: 3rem;}
+    .aboutSFour {padding-top: 3rem;margin-bottom: 200px;}
 }
 @media (max-width:512px) {}
 /* About Section Five */
@@ -347,7 +347,7 @@
         padding-top: 2.5rem;
     }
     .aboutSFive .fx-trainingProgrames{justify-content: center;gap: 8px;}
-    .aboutSFive .fx-trainingProgrames .box3 .trainingProgrames-texts{width: 50%;}
+    .aboutSFive .fx-trainingProgrames .box3 .trainingProgrames-texts{width: 80%;}
 }
 @media (max-width:1024px) {}
 @media (max-width:877.71px) {}
@@ -357,26 +357,36 @@
         flex: 1 1 calc(100% - 20px);
         max-width: calc(100% - 0px);
         padding-top: 2.5rem;
+        background-position: center;
+        background-size: cover;
+        border-radius: 30px;
     }
     .aboutSFive .fx-trainingProgrames .box2 {
         flex: 1 1 calc(100% - 20px);
         max-width: calc(100% - 0px);
         padding: 30px 10px;
-        margin: 12px 0;
     }
-    .aboutSFive .fx-trainingProgrames{gap: 0;margin-top: 1.5rem;}
+    .aboutSFive .fx-trainingProgrames{gap: 24px;margin-top: 1.5rem;}
     .aboutSFive .fx-trainingProgrames .box2 .fxGeneral-cards{gap: 8px;}
     .aboutSFive .fx-trainingProgrames .box2 .attendSection33 {
         flex: 1 1 calc(50% - 8px);
         max-width: calc(50% - 0px);
     }
-    .aboutSFive .fx-trainingProgrames .box4, .aboutSFive .fx-trainingProgrames .box5, .aboutSFive .fx-trainingProgrames .box6 {
+    .aboutSFive .fx-trainingProgrames .box4,
+    .aboutSFive .fx-trainingProgrames .box5,
+     .aboutSFive .fx-trainingProgrames .box6 {
         flex: 1 1 calc(100% - 0px);
         max-width: calc(100% - 0px);
+        background-position: center;
+        background-size: cover;
+        border-radius: 30px;
     }
     .aboutSFive .fx-trainingProgrames .box2 .attendSection p{font-size: 11px;}
     .aboutSFive .trainingProgrames-box h4{font-size: 20px;}
-    .aboutSFive .trainingProgrames-box p{font-size: 14px;}
+    .aboutSFive .trainingProgrames-box p{
+        font-size: 16px;
+        line-height: 26px;
+    }
     .aboutSFive .fx-trainingProgrames .box4 p, 
     .aboutSFive .fx-trainingProgrames .box5 p, 
     .aboutSFive .fx-trainingProgrames .box6 p{text-align: center;}
