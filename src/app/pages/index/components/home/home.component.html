@@ -138,7 +138,7 @@
                         <h3 class="subtitle36px font-bold color-two">{{ mainVideo.title }}</h3>
                         <p class="subtitle16px style-font color-two">{{ mainVideo.subTitle }}</p>
                     </div>
-                    <video #videoPlayer class="mainVideo " controls autoplay muted>
+                    <video #videoPlayer class="mainVideo " controls autoplay muted crossorigin="anonymous">
                         <source [src]="mainVideo.src" [type]="mainVideo.type">
                         Your browser does not support the video tag.
                     </video>
