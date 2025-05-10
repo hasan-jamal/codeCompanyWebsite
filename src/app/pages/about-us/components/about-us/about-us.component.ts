@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewEncapsulation } from '@angular/core';
+import { Component, ViewChild, ViewEncapsulation } from '@angular/core';
 import { SlickCarouselModule,SlickCarouselComponent } from 'ngx-slick-carousel';
 
 @Component({
@@ -14,6 +14,7 @@ import { SlickCarouselModule,SlickCarouselComponent } from 'ngx-slick-carousel';
   
 })
 export class AboutUsComponent {
+  @ViewChild('slickModallogos',{ static:false}) slickModallogos!:SlickCarouselComponent
   // Second slider logos
  logos = [
   "../../../../../assets/images/Partners logos/Austria.png",
@@ -37,7 +38,7 @@ export class AboutUsComponent {
     slidesToShow: 6,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 500,
+    autoplaySpeed: 2000,
     infinite: true,
     arrows: false,
     dots: false,
@@ -63,33 +64,39 @@ export class AboutUsComponent {
       {
         breakpoint: 1700,
         settings: {
-          slidesToShow: 6,
+          slidesToShow: 6.3,
         },
       },
       {
         breakpoint: 1300,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 5.4,
         },
       },
       {
         breakpoint: 1100,
         settings: {
-          slidesToShow: 5,
+          slidesToShow: 5.4,
         },
       },
       {
         breakpoint: 900,
         settings: {
-          slidesToShow: 4,
+          slidesToShow: 4.2,
         },
       },
       {
         breakpoint: 768,
         settings: {
-          slidesToShow: 3,
+          slidesToShow: 2.5,
         },
       },
     ],
   };
+  nextSlidelogo() {
+    this.slickModallogos.slickNext();
+  }
+  prevSlidelogo() {
+    this.slickModallogos.slickPrev();
+  }
 }

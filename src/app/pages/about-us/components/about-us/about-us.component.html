@@ -3,31 +3,21 @@
         <div class="aboutSOne-content">
             <h1 class="font-bold colorWhite text-center" data-aos="fade-down">Discover a single place that <br>
                 create <span class="color-linearGradient">powerful </span>products</h1>
-            <div class="d-flex justify-content-between fx-aboutSOne">
-                <div class="d-flex fx-buttons">
-                    <button class="btn-linearGradient d-flex align-items-center justify-content-center">
-                        <img src="../../../../../assets/images/globe.svg" alt="globe icon">
-                        <span class="font-medium colorWhite subtitle24px">Public Sectors</span>
-                    </button>
-                    <button class="btnOutline d-flex align-items-center justify-content-center">
-                        <img src="../../../../../assets/images/map-pin.svg" alt="map icon">
-                        <span class="font-medium color-linearGradient  subtitle24px">Enterprises</span>
-                    </button>
-                    <button class="btnOutline d-flex align-items-center justify-content-center">
-                        <img src="../../../../../assets/images/credit-card.svg" alt="credit card icon">
-                        <span class="font-medium color-linearGradient  subtitle24px">Banking & Finance</span>
-                    </button>
-                    <h2 class="mb-0 font-bold ourClients">Our clients</h2>
-                </div>
-
-                <h2 class="mb-0 font-bold">Our clients</h2>
-            </div>
         </div>
     </div>
 </section>
 <section class="aboutSTwo">
     <div class="aboutSTwo-container">
-        <ngx-slick-carousel class="sliderLogos-black" [config]="slideConfig">
+        <div class="d-flex align-items-center justify-content-between aboutSTwoText px-120">
+            <h1 class="color-linearGradient font-bold subtitle36px" data-aos="fade-down" data-aos-easing="linear"
+                data-aos-duration="1000">Our clients</h1>
+            <div class="arrows-logos d-flex align-items-center ms-3" (click)="nextSlidelogo()"><img
+                    src="../../../../../assets/images/rightBlog.svg" alt="Next Slide"
+                    class="rightLogo transition3s ms-2" (click)="prevSlidelogo()"><img
+                    src="../../../../../assets/images/leftBlog.svg" alt="Previous Slide" class="leftLogo transition3s">
+            </div>
+        </div>
+        <ngx-slick-carousel class="sliderLogos-black" [config]="slideConfig" #slickModallogos>
             <div ngxSlickItem *ngFor="let logo of logos" class="slide">
                 <img [src]="logo" alt="logo" />
             </div>
@@ -38,8 +28,10 @@
     <div class="aboutSThree-container px-120">
         <div class="d-flex fx-aboutSThree">
             <div class="aboutSThree-texts ">
-                <span class="subtitle24px color-linearGradient font-medium mb24 d-block">Who is Code?</span>
-                <h1 class="subtitle48px colorOne font-bold mb24"> Code is the <span class="color-linearGradient">AI
+                <span class="subtitle24px color-linearGradient font-medium mb24 d-block" data-aos="fade-down"
+                    data-aos-easing="linear" data-aos-duration="500">Who is Code?</span>
+                <h1 class="subtitle48px colorOne font-bold mb24" data-aos="zoom-in-up"> Code is the <span
+                        class="color-linearGradient">AI
                         power</span>
                     that helps
                     you create
@@ -59,7 +51,13 @@
             <div class="aboutSThree-imgs">
                 <img src="../../../../../assets/images/WhoisCode.png" alt="About image"
                     class="aboutSThree-img1 d-block">
-                <img src="../../../../../assets/images/WhoisCode2.png" alt="About image" class="aboutSThree-img2">
+                <div class="createdDate">
+                    <h4 class="font-medium colorTwo subtitle24px ">Create</h4>
+                    <h1 class="color-linearGradient font-bold subtitle72px">2016</h1>
+                </div>
+                <div class="imgAbs">
+                    <img src="../../../../../assets/images/WhoisCode2.png" alt="About image" class="aboutSThree-img2">
+                </div>
             </div>
         </div>
     </div>
@@ -69,9 +67,10 @@
         <img src="../../../../../assets/images/OVERVIEW-back.png" alt="OVERVIEW background" class="overviewBack">
         <div class="d-flex fx-aboutSFour">
             <div class="aboutSFour-part">
-                <img src="../../../../../assets/images/aboutSFour-img1.png" alt="about img" class="aboutSFour-img">
+                <img src="../../../../../assets/images/aboutSFour-img1.png" alt="about img" class="aboutSFour-img"
+                    data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                 <div class="aboutSFour-texts">
-                    <h1 class="text-center font-bold subtitle48px colorOne mb24"> <span
+                    <h1 class="text-center font-bold subtitle48px colorOne mb24" data-aos="zoom-in-up"> <span
                             class="color-linearGradient">Code</span> is Guided by a strong<span
                             class="color-linearGradient"> mission</span>
                     </h1>
@@ -84,7 +83,7 @@
             </div>
             <div class="aboutSFour-part">
                 <div class="aboutSFour-texts">
-                    <h1 class="text-center font-bold subtitle48px colorOne mb24"> <span
+                    <h1 class="text-center font-bold subtitle48px colorOne mb24" data-aos="zoom-in-up"> <span
                             class="color-linearGradient">Code</span> is
                         driven by a <br> clear <span class="color-linearGradient">vision</span>
                     </h1>
@@ -98,7 +97,8 @@
                         to drive business success.
                     </p>
                 </div>
-                <img src="../../../../../assets/images/aboutSFour-img2.png" alt="about img" class="aboutSFour-img">
+                <img src="../../../../../assets/images/aboutSFour-img2.png" alt="about img" class="aboutSFour-img"
+                    data-aos="fade-up" data-aos-anchor-placement="center-bottom">
             </div>
         </div>
     </div>
@@ -107,7 +107,8 @@
     <div class="aboutSFive-container px-120">
         <span class="color-linearGradient font-medium text-center d-block subtitle24px mb24">Our training
             programes</span>
-        <h1 class="font-bold subtitle48px colorOne text-center mb24"> How to Build Your
+        <h1 class="font-bold subtitle48px colorOne text-center mb24" data-aos="zoom-in-up"> How to
+            Build Your
             Own<span class="color-linearGradient">
                 Professional<br>DB Consulting
             </span> Service in 40
@@ -218,8 +219,10 @@
     <div class="contactSection-container px-120">
         <div class="contactSection-div d-flex">
             <div class="contactSection-texts">
-                <span class="subtitle24px d-block color-linearGradient font-medium mb24">Work with us</span>
-                <h1 class=" subtitle48px font-bold mb-0">Ready to <span class="color-linearGradient">join us
+                <span class="subtitle24px d-block color-linearGradient font-medium mb24" data-aos="fade-down"
+                    data-aos-easing="linear" data-aos-duration="1000"> Work with us</span>
+                <h1 class=" subtitle48px font-bold mb-0" data-aos="zoom-in-up">Ready to <span
+                        class="color-linearGradient">join us
                     </span>& <span class="color-linearGradient"><br> level up</span> your
                     skills</h1>
             </div>
