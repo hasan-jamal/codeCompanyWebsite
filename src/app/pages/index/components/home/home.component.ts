@@ -106,7 +106,7 @@ constructor(private elementRef: ElementRef) {}
       if (this.videoPlayer) {
         this.videoPlayer.nativeElement.load();
         this.videoPlayer.nativeElement.play().catch(() => {}); // optional: handle autoplay error
-      }
+      } 
     });
   }
  
