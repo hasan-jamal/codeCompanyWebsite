@@ -64,7 +64,7 @@ constructor(private elementRef: ElementRef) {}
           img:'assets/images/Frame-399-min.png'
   },
   {
-    src: '../../../assets/videos/videoThree.mp4',
+    src: '../../../../../as',
     type: 'video/mp4',
     title: 'Construction WIP Monitoring',
     subTitle: 'Lorem ipsum dolor sit amet...',
