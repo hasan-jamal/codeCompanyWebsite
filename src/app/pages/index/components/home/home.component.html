@@ -139,11 +139,10 @@
                         <p class="subtitle16px style-font color-two">{{ mainVideo.subTitle }}</p>
                     </div>
                     <video #videoPlayer class="mainVideo " controls autoplay>
-                        <source src="../../../../../assets/videos/videoFour.mp4" [type]="mainVideo.type">
+                        <source [src]="mainVideo.src" [type]="mainVideo.type">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-
                 <!-- Thumbnails -->
                 <div class="d-flex video-thumbnails fxGeneral-cards">
                     <div class="thumbnail" *ngFor="let video of plyrList" (click)="changeVideo(video)">
@@ -154,10 +153,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
             </div>
         </div>
     </div>

@@ -50,35 +50,35 @@ constructor(private elementRef: ElementRef) {}
   mainVideo: any;
   plyrList : any[]= [
     {
-        src: '../../../assets/videos/videoOne.mp4',
+        src: 'assets/videos/videoOne.mp4',
         type: 'video/mp4',
       title: 'AI vs Human: The Results Will Shock You!',
       subTitle: 'Lorem ipsum dolor sit amet...',
       img:'assets/images/Frame-398-min.png'
     },
   {
-    src: '../../../assets/videos/videoTwo.mp4',
+    src: 'assets/videos/videoTwo.mp4',
     type: 'video/mp4',
     title: 'Real Estate Touch TV App',
     subTitle: 'Lorem ipsum dolor sit amet...',
           img:'assets/images/Frame-399-min.png'
   },
   {
-    src: '../../../../../as',
+    src: 'assets/videos/videoThree.mp4',
     type: 'video/mp4',
     title: 'Construction WIP Monitoring',
     subTitle: 'Lorem ipsum dolor sit amet...',
           img:'assets/images/Frame-397-min.png'
   },
     {
-      src: '../../../assets/videos/videoFour.mp4',
+      src: 'assets/videos/videoFour.mp4',
         type: 'video/mp4',
       title: 'Sustainability via Digital Twin',
       subTitle: 'Lorem ipsum dolor sit amet...',
             img:'assets/images/Frame-396-min.png'
     },
     {
-      src: '../../../assets/videos/videoFive.mp4',
+      src: 'assets/videos/videoFive.mp4',
       type: 'video/mp4',
       title: 'Monitoring Sustainable Environments',
       subTitle: 'Lorem ipsum dolor sit amet...',
