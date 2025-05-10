@@ -50,35 +50,35 @@ constructor(private elementRef: ElementRef) {}
   mainVideo: any;
   plyrList : any[]= [
     {
-        src: 'assets/videos/videoOne.mp4',
+        src: 'https://res.cloudinary.com/dx2ah9foq/video/upload/v1746881529/videoOne_gpt6dw.mp4',
         type: 'video/mp4',
       title: 'AI vs Human: The Results Will Shock You!',
       subTitle: 'Lorem ipsum dolor sit amet...',
       img:'assets/images/Frame-398-min.png'
     },
   {
-    src: 'assets/videos/videoTwo.mp4',
+    src: 'https://res.cloudinary.com/dx2ah9foq/video/upload/v1746881638/videoTwo_v86h3s.mp4',
     type: 'video/mp4',
     title: 'Real Estate Touch TV App',
     subTitle: 'Lorem ipsum dolor sit amet...',
           img:'assets/images/Frame-399-min.png'
   },
   {
-    src: 'assets/videos/videoThree.mp4',
+    src: 'https://res.cloudinary.com/dx2ah9foq/video/upload/v1746881692/videoFour_entojn.mp4',
     type: 'video/mp4',
     title: 'Construction WIP Monitoring',
     subTitle: 'Lorem ipsum dolor sit amet...',
           img:'assets/images/Frame-397-min.png'
   },
     {
-      src: 'assets/videos/videoFour.mp4',
+      src: 'https://res.cloudinary.com/dx2ah9foq/video/upload/v1746881805/videoFive_h68de2.mp4',
         type: 'video/mp4',
       title: 'Sustainability via Digital Twin',
       subTitle: 'Lorem ipsum dolor sit amet...',
             img:'assets/images/Frame-396-min.png'
     },
     {
-      src: 'assets/videos/videoFive.mp4',
+      src: 'https://res.cloudinary.com/dx2ah9foq/video/upload/v1746882191/videoThree_g4vcgu.mp4',
       type: 'video/mp4',
       title: 'Monitoring Sustainable Environments',
       subTitle: 'Lorem ipsum dolor sit amet...',
