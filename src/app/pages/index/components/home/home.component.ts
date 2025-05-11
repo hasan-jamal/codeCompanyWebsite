@@ -92,6 +92,8 @@ constructor(private elementRef: ElementRef) {}
      this.activateFirstBox();
      this.mainVideo = this.plyrList[0];
      this.plyrList = this.plyrList.slice(1)
+
+ 
   }
   changeVideo(video: any) {
     const updatedList = this.plyrList.filter(v => v.src !== video.src);
@@ -107,6 +109,7 @@ constructor(private elementRef: ElementRef) {}
         this.videoPlayer.nativeElement.load();
         this.videoPlayer.nativeElement.play().catch(() => {}); // optional: handle autoplay error
       } 
+      
     });
   }
  
@@ -114,21 +117,17 @@ constructor(private elementRef: ElementRef) {}
     this.initSliders(); 
 
     setTimeout(() => {
-    const dots = $('.sectionSix .slick-dots');
-    if (!dots.find('.custom-next-arrow').length) {
-      dots.append('<button class="custom-next-arrow"></button>');
-    }
-   $('.custom-next-arrow').append('<img src="../../assets/images/arrow-peopleSaying.svg" />');
-    $('.custom-next-arrow').on('click', () => {
-      this.slickPeopleSaying.slickNext()
-    });
-    });
+      const dots = $('.sectionSix .slick-dots');
+      if (!dots.find('.custom-next-arrow').length) {
+        dots.append('<button class="custom-next-arrow"></button>');
+      }
+     $('.custom-next-arrow').append('<img src="../../assets/images/arrow-peopleSaying.svg" />');
+      $('.custom-next-arrow').on('click', () => {
+        this.slickPeopleSaying.slickNext()
+      });
+      });
   }
 
- 
-
-
-  
   // Start Section Three style
   boxes = [
     { id: 1, showPart2: false, isAnimating: false, isActive: false },
