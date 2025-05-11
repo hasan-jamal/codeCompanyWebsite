@@ -22,6 +22,13 @@ export class AppComponent implements OnInit  {
       const AOS = (await import('aos')).default;
       AOS.init();
     }
+    setTimeout(() => {
+      const appRoot = document.querySelector('app-root') as HTMLElement;
+      const splashScreen = document.querySelector('#splash-screen') as HTMLElement;
+      appRoot.style.display = 'block';
+      splashScreen.style.display = 'none';
+      console.log(appRoot.style.visibility)
+    }, 10000);
   }
   title = 'code-website';
 }
