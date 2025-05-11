@@ -28,7 +28,7 @@ export class AppComponent implements OnInit  {
       appRoot.style.display = 'block';
       splashScreen.style.display = 'none';
       console.log(appRoot.style.visibility)
-    }, 10000);
+    }, 3000);
   }
   title = 'code-website';
 }
