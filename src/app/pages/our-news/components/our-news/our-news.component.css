@@ -135,6 +135,7 @@
     .blogPageS1 .blogPageS1-back {height: 55vh;}
     .blogPageS1 .boxEmpty{width: 100px;height: 70px;}
     .blogPageS1 h1 br{display: none;}
+    .blogPageS1{margin-bottom: 80px;}
   }
   @media (max-width:512px) {}
 /* blog Page Section 2 Style  */
@@ -384,3 +385,143 @@
     .blogPageS3 .pagination{gap: 6px;}
   }
   @media (max-width:512px) {}
+
+  /* Blog Page S4 Style */
+  .blogPageS4{
+    margin-bottom: 62px;
+
+  }
+  .blogPageS4-titles{
+    width: 55%;
+    margin: auto;
+  }
+  .blogPageS4-titles,
+  .blogPageS4 .divSlider .sliderTitle{
+    margin-bottom: 36px;
+  }
+  .blogPageS4 .divSlider .arrowsStories{gap: 10px;}
+  .blogPageS4 .divSlider .sliderStories{
+    padding-left: 120px;
+  }
+  .blogPageS4 .divSlider .sliderStories .slide{
+    padding: 0 10px;
+  }
+  .blogPageS4 .divSlider .sliderStories .cardStory{
+    height: 276px;
+    border-radius: 20px;
+    padding: 32px;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .blogPageS4 .divSlider .sliderStories .cardStory::after{
+    position: absolute;
+    content: "";
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    left: 0;
+    top: 0;
+  }
+  .blogPageS4 .divSlider .sliderStories .cardStory h4{
+    position: relative;
+    z-index: 3;
+  }
+  .blogPageS4 .divSlider .sliderStories .cardStory .divButton{
+    background: #fff;
+    padding: 20px 20px 0 20px;
+    position: absolute;
+    left: 50%;
+    bottom:0;
+    transform: translateX(-50%);
+    border-radius: 50px 50px 0 0;
+    z-index: 3;
+  }
+  .blogPageS4 .divSlider .sliderStories .cardStory .divButton::after {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    bottom: 0px;
+    right: -2.3rem;
+    transform: rotate(90deg);
+    border-radius: 0 0 30px 0;
+    z-index: 1;
+    box-shadow: 9px 9px #f6fafd;
+}
+.blogPageS4 .divSlider .sliderStories .cardStory .divButton::before {
+    content: "";
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    background: transparent;
+    bottom: 0px;
+    left: -2.3rem;
+    border-radius: 0 0 30px 0;
+    z-index: 1;
+    box-shadow: 9px 9px #f6fafd;
+}
+  .blogPageS4 .divSlider .sliderStories .cardStory .divButton button{
+    background: none;
+  }
+  @media (min-width:1706.67px) {
+    .blogPageS4 .arrowsStories .leftStory{width: 50px;}
+    .blogPageS4 .arrowsStories .rightStory{width: 90px;}
+}
+@media (min-width:1920px) {
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 340px;}
+    .blogPageS4 .arrowsStories .leftStory{width: 60px;}
+    .blogPageS4 .arrowsStories .rightStory{width: 110px;}
+}
+@media (min-width:2048px) {
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 390px;}
+    .blogPageS4 .arrowsStories .leftStory{width: 70px;}
+    .blogPageS4 .arrowsStories .rightStory{width: 120px;}
+ }
+ @media (min-width:2304px) {}
+@media (max-width:1396.36px) {
+    .blogPageS4 .divSlider .sliderStories{padding-left: 100px;}
+}
+@media (max-width:1228.8px) {
+    .blogPageS4 .divSlider .sliderStories{padding-left: 80px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton{padding: 15px 15px 0 15px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton img{width: 50px;}
+    .blogPageS4-titles{width: 50%;}
+}
+@media (max-width:1024px) {
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 200px;}
+    .blogPageS4 .divSlider .sliderStories{padding-left: 50px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton{padding: 10px 10px 0 10px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton img{width: 40px;}
+    .blogPageS4-titles, .blogPageS4 .divSlider .sliderTitle{margin-bottom: 24px;}
+}
+@media (max-width:877.71px) {
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 180px;padding:16px;}
+    .blogPageS4 .divSlider .sliderStories{padding-left: 30px;}
+    .blogPageS4 .divSlider .sliderStories .slide{padding: 0 5px;}
+    .blogPageS4 .arrowsStories .leftStory{width: 35px;}
+    .blogPageS4 .arrowsStories .rightStory{width: 60px;}
+}
+@media (max-width:768px) {
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 160px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton img{width: 30px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton{padding: 16px 16px 0 16px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton::before {width: 40px;left: -2.3rem; box-shadow: 12px 12px #f6fafd;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton::after {width: 40px;right: -2.3rem;box-shadow: 12px 12px #f6fafd;}
+}
+@media (max-width:614.4px) {
+
+    .blogPageS4 .divSlider .sliderStories .cardStory{height: 150px;padding:16px;}
+    .blogPageS4 .arrowsStories .leftStory{width: 35px;}
+    .blogPageS4 .arrowsStories .rightStory{width: 60px;}
+    .blogPageS4 .divSlider .sliderStories{padding-left: 20px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton{padding: 8px 8px 0 8px;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton::before {    bottom: -10px; box-shadow: 5px 5px #f6fafd;}
+    .blogPageS4 .divSlider .sliderStories .cardStory .divButton::after {    bottom: -10px;box-shadow: 5px 5px #f6fafd;}
+    .blogPageS4-titles{width: 95%;}
+    .blogPageS4{margin-bottom: 80px;}
+}
+@media (max-width:512px) {}

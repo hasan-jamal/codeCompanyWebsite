@@ -16,7 +16,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
 export class NavbarMbComponent{
      isSidenavOpen = false;
     servicesListOpen = false;
-    aboutUsListOpen = false;
+    aboutUsListOpen = true;
   constructor(private renderer: Renderer2) {}
  toggleSidenav(open: boolean) {
     this.isSidenavOpen = open;
@@ -32,8 +32,6 @@ export class NavbarMbComponent{
   }
   closeSidenav(){
     this.isSidenavOpen = false;
-    this.servicesListOpen = false;
-    this.aboutUsListOpen = false;
     const body = document.getElementById('body');
     this.renderer.setStyle(body, 'overflow', 'auto');
   }
